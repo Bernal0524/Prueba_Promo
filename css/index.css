@@ -1,0 +1,372 @@
+:root {
+    --Background: #cbdcde; /* Fondo general */
+    --PrimaryFont: #243746; /* Letra principal */
+    --SecondaryFont: #89b0b5; /* Segunda opción para letra */
+    --Button: #b0b0b2; /* Color de botones */
+    --ButtonHover: #f0f5f5; /* Color al poner el mouse sobre el botón */
+    --HeaderBackground: #062945; /* Fondo del encabezado */
+    --MenuLinkColor: #ffffff; /* Color de texto de los enlaces del menú */
+    --MenuLinkHoverColor: #003b34; /* Color de texto al pasar el mouse sobre los enlaces del menú */
+    --SectionFontColor: #243746; /* Color de texto para secciones */
+}
+
+/* Reset de estilos básicos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--Background);
+    color: var(--PrimaryFont);
+}
+
+h1, h2, h3 {
+    font-family: 'Bodoni Moda', sans-serif; /* Títulos */
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: var(--HeaderBackground);
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-logo {
+    height: 75px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: var(--HeaderBackground);
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer img {
+    max-width: 100%;
+    height: 75px;
+    border-radius: 100%;
+}
+
+/* Menú de navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--MenuLinkColor);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: var(--MenuLinkHoverColor);
+}
+
+/* Menú general */
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--HeaderBackground);
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    margin: 0 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--MenuLinkColor);
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--ButtonHover);
+    color: var(--MenuLinkHoverColor);
+}
+
+/* Contenido del encabezado */
+.header-content {
+    position: relative;
+    height: 500px;
+    background: url('https://andianbistro.com/wp-content/uploads/2020/08/EVENTOS.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-plato {
+    height: 400px;
+    width: auto;
+    margin-right: 200px;
+}
+
+.header-text { 
+    color: white; /* Asegura que el texto sea blanco */
+    text-align: center; /* Alinea el texto al centro */
+    font-style: italic; /* Aplica estilo en cursiva */
+    background-color: rgba(22, 21, 21, 0.75); /* Fondo semitransparente */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    font-size: 2.5rem; /* Ajusta el tamaño del texto (grande) */
+}
+
+/* Estilos de los títulos */
+h1, h2, h3 {
+    color: var(--PrimaryFont);
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+/* Sección de inicio */
+.section-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0;
+    min-height: 400px;
+}
+
+#fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ACT.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#fondo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(203, 220, 222, 0.5);
+    z-index: 1;
+}
+
+h1, p {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 20px 0;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+/* Estilos de las cajas */
+.cajas {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    background-color: var(--Background);
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.caja {
+    flex: 1 1 30%;
+    margin: 0;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.caja img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.caja h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+/* Estilos del menú sobre las imágenes */
+.caja nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.caja .menu li a {
+    color: var(--MenuLinkColor);
+    background-color: var(--Button);
+    padding: 8px 15px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.caja .menu li a:hover {
+    background-color: var(--ButtonHover);
+    color: var(--MenuLinkHoverColor);
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los botones de las cajas */
+.caja .boton {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--Button);
+    color: var(--Background);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.caja .boton:hover {
+    background-color: var(--ButtonHover);
+    color: var(--SecondaryFont);
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .menu a {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .caja {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 2%;
+    }
+
+    .caja {
+        flex: 1 1 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .menu a {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .caja {
+        flex: 1 1 100%;
+    }
+}
